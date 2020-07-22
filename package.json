@@ -1,6 +1,6 @@
 {
   "name": "com.intervr.if.intervr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "if.InterVR",
   "description": "iNTERVR framework - VR library",
   "unity": "2019.4",
@@ -13,5 +13,17 @@
     "com.intervr.ecsrx.unity": "https://github.com/iNTERVR/ecsrx.unity.git#upm",
     "com.intervr.neuecc.unirx": "https://github.com/iNTERVR/UniRx.git#upm",
     "com.intervr.modesttree.zenject": "https://github.com/iNTERVR/Zenject.git#upm"
-  }
+  },
+  "samples": [
+    {
+      "displayName": "VR Prototype",
+      "description": "InterFramework VR Template",
+      "path": "Samples~/VRPrototype"
+    },
+    {
+      "displayName": "VR Glove Prototype",
+      "description": "InterFramework VR Glove Template",
+      "path": "Samples~/VRGlovePrototype"
+    }
+  ]
 }
