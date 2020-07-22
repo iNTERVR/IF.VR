@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6428cd6d185de64988f0c46e901f258, type: 3}
+  m_Name: SteamVRInterfaceSettings
+  m_EditorClassIdentifier: 
+  settings:
+    SteamVRConfig: {fileID: 553243709740463406, guid: f8ccace12188dc7468a251e9ca253497,
+      type: 3}
+    PlayVolume: {fileID: 3370977844534973271, guid: 4de6a43b6b471a54aa286ff32ce39c1f,
+      type: 3}
+    LeftHandRendererModelPrefab: {fileID: 467255000042528740, guid: f9896e0e0d788d949991e44a018fd90a,
+      type: 3}
+    RightHandRendererModelPrefab: {fileID: 7663571855681007835, guid: ad1c78200b20f504aa74db7413711f7e,
+      type: 3}
+    ControllerRendererModelPrefab: {fileID: 1000011460529826, guid: e789c2cc0c98a4c4198a4033fb8ccf96,
+      type: 3}
+    HeadsetOnHead:
+      actionPath: /actions/default/in/HeadsetOnHead
+      needsReinit: 0
