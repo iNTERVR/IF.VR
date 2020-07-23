@@ -1,18 +1,18 @@
 {
-  "name": "com.intervr.if.intervr",
+  "name": "com.unity.intervr.if.intervr",
   "version": "1.0.1",
-  "displayName": "if.InterVR",
-  "description": "iNTERVR framework - VR library",
+  "displayName": "if InterVR",
+  "description": "iNTERVR framework - VR package, supported plugins are steamvr, manusvr and UnityXR",
   "unity": "2019.4",
   "license": "MIT",
   "unityRelease": "4f1",
   "dependencies": {
-    "com.intervr.if.inter": "https://github.com/iNTERVR/if.inter.git",
-    "com.intervr.manusvr": "https://github.com/iNTERVR/manusvr.git#upm",
-    "com.intervr.ecsrx": "https://github.com/iNTERVR/ecsrx.git#upm",
-    "com.intervr.ecsrx.unity": "https://github.com/iNTERVR/ecsrx.unity.git#upm",
-    "com.intervr.neuecc.unirx": "https://github.com/iNTERVR/UniRx.git#upm",
-    "com.intervr.modesttree.zenject": "https://github.com/iNTERVR/Zenject.git#upm"
+    "com.unity.intervr.if.inter": "1.0.0",
+    "com.unity.intervr.manusvr": "3.1.1",
+    "com.unity.intervr.ecsrx": "4.0.0",
+    "com.unity.intervr.ecsrx.unity": "3.0.0",
+    "com.unity.intervr.neuecc.unirx": "8.0.0",
+    "com.unity.intervr.modesttree.zenject": "9.0.0"
   },
   "samples": [
     {
