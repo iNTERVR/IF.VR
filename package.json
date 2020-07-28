@@ -5,9 +5,9 @@
   "description": "iNTERVR framework - VR package, supported plugins are steamvr, manusvr and UnityXR",
   "unity": "2019.4",
   "license": "MIT",
-  "unityRelease": "4f1",
+  "unityRelease": "5f1",
   "dependencies": {
-    "com.unity.intervr.if.inter": "1.0.0",
+    "com.unity.intervr.if.inter": "1.0.1",
     "com.unity.intervr.manusvr": "3.1.1",
     "com.unity.intervr.ecsrx": "4.0.0",
     "com.unity.intervr.ecsrx.unity": "3.0.0",
