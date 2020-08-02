@@ -14,18 +14,6 @@ namespace Inter.VR.VRPrototype
         protected override void BindSystems()
         {
             base.BindSystems();
-
-            // inter system setup
-            Container.BindApplicableSystems(
-                "Inter.Systems",
-                "Inter.ViewResolvers"
-                );
-
-            // inter vr system setup
-            Container.BindApplicableSystems(
-                "Inter.VR.Systems",
-                "Inter.VR.ViewResolvers"
-                );
         }
 
         protected override void LoadModules()
