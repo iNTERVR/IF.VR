@@ -116,7 +116,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
                     }
                 }).AddTo(subscriptions);
 
-            eventSystem.Receive<OnAttachedToHand>()
+            eventSystem.Receive<OnAttachedToHandEvent>()
                 .Subscribe(evt =>
                 {
                     var vrHandEntity = evt.HandEntity;
@@ -130,7 +130,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
                     vrInteractable.AttachedToHandEntity = vrHandEntity;
                 }).AddTo(subscriptions);
 
-            eventSystem.Receive<OnDetachedToHand>()
+            eventSystem.Receive<OnDetachedToHandEvent>()
                 .Subscribe(evt =>
                 {
                     var vrHandEntity = evt.HandEntity;

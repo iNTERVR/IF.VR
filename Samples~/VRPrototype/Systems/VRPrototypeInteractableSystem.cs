@@ -99,7 +99,7 @@ namespace Inter.VR.VRPrototype.Systems
                     }
                 }).AddTo(subscriptions);
 
-            eventSystem.Receive<OnAttachedToHand>()
+            eventSystem.Receive<OnAttachedToHandEvent>()
                 .Subscribe(evt =>
                 {
                     var vrHandView = evt.HandEntity.GetGameObject();
@@ -107,14 +107,14 @@ namespace Inter.VR.VRPrototype.Systems
                     vrPrototypeInteractable.AttachTime = Time.time;
                 }).AddTo(subscriptions);
 
-            eventSystem.Receive<OnDetachedToHand>()
+            eventSystem.Receive<OnDetachedToHandEvent>()
                 .Subscribe(evt =>
                 {
                     var vrHandView = evt.HandEntity.GetGameObject();
                     vrPrototypeInteractable.GeneralText.text = string.Format("Detached: {0}", vrHandView.name);
                 }).AddTo(subscriptions);
 
-            eventSystem.Receive<OnHandAttachedUpdate>()
+            eventSystem.Receive<OnHandAttachedUpdateEvent>()
                 .Subscribe(evt =>
                 {
                     var vrHandView = evt.HandEntity.GetGameObject();

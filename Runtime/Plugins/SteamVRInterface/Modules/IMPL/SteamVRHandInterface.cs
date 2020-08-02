@@ -300,7 +300,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Modules
 
             vrInterface.UpdateHandHovering(vrHandEntity);
 
-            eventSystem.Publish(new OnAttachedToHand() { HandEntity = vrHandEntity });
+            eventSystem.Publish(new OnAttachedToHandEvent() { HandEntity = vrHandEntity });
         }
 
         public IEntity GetLastAttachedInfoEntity(IEntity vrHandEntity)
@@ -430,7 +430,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Modules
                     attachView.SetActive(true);
                 }
 
-                eventSystem.Publish(new OnDetachedToHand() { HandEntity = handEntity });
+                eventSystem.Publish(new OnDetachedToHandEvent() { HandEntity = handEntity });
 
                 entityDatabase.RemoveEntity(attachedInfoEntity);
 

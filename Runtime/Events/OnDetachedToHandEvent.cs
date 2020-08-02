@@ -4,7 +4,7 @@ using Valve.VR;
 
 namespace Inter.VR.Events
 {
-    public class OnDetachedToHand
+    public class OnDetachedToHandEvent
     {
         public IEntity HandEntity;
     }

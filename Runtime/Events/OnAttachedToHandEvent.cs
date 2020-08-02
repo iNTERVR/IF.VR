@@ -2,7 +2,7 @@
 
 namespace Inter.VR.Events
 {
-    public class OnAttachedToHand
+    public class OnAttachedToHandEvent
     {
         public IEntity HandEntity;
     }

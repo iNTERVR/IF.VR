@@ -187,7 +187,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
                     var attachedInfo = currentAttachedInfoEntity.GetComponent<InterVRHandAttachedInfo>();
                     if (attachedInfo.AttachedEntity != null)
                     {
-                        eventSystem.Publish(new OnHandAttachedUpdate() { HandEntity = entity });
+                        eventSystem.Publish(new OnHandAttachedUpdateEvent() { HandEntity = entity });
                     }
                 }).AddTo(subscriptions);
         }

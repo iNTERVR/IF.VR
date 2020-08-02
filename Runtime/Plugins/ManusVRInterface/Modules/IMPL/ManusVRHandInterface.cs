@@ -317,7 +317,7 @@ namespace Inter.VR.Plugins.ManusVRInterface.Modules
             //    HandDebugLog("AttachObject " + objectToAttach);
             //objectToAttach.SendMessage("OnAttachedToHand", this, SendMessageOptions.DontRequireReceiver);
 
-            eventSystem.Publish(new OnAttachedToHand() { HandEntity = vrHandEntity });
+            eventSystem.Publish(new OnAttachedToHandEvent() { HandEntity = vrHandEntity });
         }
 
         public IEntity GetLastAttachedInfoEntity(IEntity vrHandEntity)
@@ -457,7 +457,7 @@ namespace Inter.VR.Plugins.ManusVRInterface.Modules
                 }
 
                 //attachedObjects[index].attachedGameObject.SendMessage("OnDetachedFromHand", this, SendMessageOptions.DontRequireReceiver);
-                eventSystem.Publish(new OnDetachedToHand() { HandEntity = handEntity });
+                eventSystem.Publish(new OnDetachedToHandEvent() { HandEntity = handEntity });
 
                 //CleanUpAttachedObjectStack();
 
