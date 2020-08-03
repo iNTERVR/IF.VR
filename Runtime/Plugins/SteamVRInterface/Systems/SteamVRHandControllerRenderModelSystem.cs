@@ -78,12 +78,6 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
                     }
                 });
 
-            Observable.EveryUpdate()
-                .Where(x => isActivated(entity))
-                .Subscribe(x =>
-                {
-                }).AddTo(subscriptions);
-
             SteamVR_Events.RenderModelLoaded.AsObservable().Subscribe(evt =>
             {
                 initializeRenderModel(entity);
