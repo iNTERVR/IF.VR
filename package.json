@@ -1,6 +1,6 @@
 {
   "name": "com.intervr.if.intervr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "if InterVR",
   "description": "iNTERVR framework - VR package, supported plugins are steamvr, manusvr and UnityXR",
   "unity": "2019.4",

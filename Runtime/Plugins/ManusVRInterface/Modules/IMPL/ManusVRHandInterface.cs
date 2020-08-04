@@ -457,7 +457,7 @@ namespace Inter.VR.Plugins.ManusVRInterface.Modules
                 }
 
                 //attachedObjects[index].attachedGameObject.SendMessage("OnDetachedFromHand", this, SendMessageOptions.DontRequireReceiver);
-                eventSystem.Publish(new OnDetachedToHandEvent() { HandEntity = handEntity });
+                eventSystem.Publish(new OnDetachedToHandEvent() { HandEntity = handEntity, AttachedEntity = attachEntity });
 
                 //CleanUpAttachedObjectStack();
 
