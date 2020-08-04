@@ -381,14 +381,14 @@ namespace Inter.VR.Modules.InterVRInterfaces
 
             if (vrHand.HoveringInteractableEntity != null)
             {
-                eventSystem.Publish(new OnHandHoverEndEvent() { HandEntity = entity });
+                eventSystem.Publish(new OnHandHoverEndEvent() { HandEntity = entity, HoveringEntity = vrHand.HoveringInteractableEntity });
             }
 
             vrHand.HoveringInteractableEntity = hoveringEntity;
 
             if (vrHand.HoveringInteractableEntity != null)
             {
-                eventSystem.Publish(new OnHandHoverBeginEvent() { HandEntity = entity });
+                eventSystem.Publish(new OnHandHoverBeginEvent() { HandEntity = entity, HoveringEntity = vrHand.HoveringInteractableEntity });
             }
         }
 

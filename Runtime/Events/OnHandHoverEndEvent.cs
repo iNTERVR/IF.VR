@@ -7,5 +7,6 @@ namespace Inter.VR.Events
     public class OnHandHoverEndEvent
     {
         public IEntity HandEntity;
+        public IEntity HoveringEntity;
     }
 }

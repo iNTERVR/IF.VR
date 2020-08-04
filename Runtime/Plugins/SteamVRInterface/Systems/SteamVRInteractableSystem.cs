@@ -91,27 +91,35 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
             eventSystem.Receive<OnHandHoverBeginEvent>()
                 .Subscribe(evt =>
                 {
-                    vrInteractable.WasHovering = vrInteractable.IsHovering;
-                    vrInteractable.IsHovering = true;
-                    vrInteractable.HoveringHandEntities.Add(evt.HandEntity);
-                    if (vrInteractable.HighlightOnHover && !vrInteractable.WasHovering)
+                    var vrHand = evt.HandEntity.GetComponent<InterVRHand>();
+                    if (vrHand.HoveringInteractableEntity.Id == entity.Id)
                     {
-                        createHighlightRenderers(entity);
-                        updateHighlightRenderers(entity);
+                        vrInteractable.WasHovering = vrInteractable.IsHovering;
+                        vrInteractable.IsHovering = true;
+                        vrInteractable.HoveringHandEntities.Add(evt.HandEntity);
+                        if (vrInteractable.HighlightOnHover && !vrInteractable.WasHovering)
+                        {
+                            createHighlightRenderers(entity);
+                            updateHighlightRenderers(entity);
+                        }
                     }
                 }).AddTo(subscriptions);
 
             eventSystem.Receive<OnHandHoverEndEvent>()
                 .Subscribe(evt =>
                 {
-                    vrInteractable.WasHovering = vrInteractable.IsHovering;
-                    vrInteractable.HoveringHandEntities.Remove(evt.HandEntity);
-                    if (vrInteractable.HoveringHandEntities.Count == 0)
+                    var vrHand = evt.HandEntity.GetComponent<InterVRHand>();
+                    if (vrHand.HoveringInteractableEntity.Id == entity.Id)
                     {
-                        vrInteractable.IsHovering = false;
-                        if (vrInteractable.HighlightOnHover && vrInteractable.HighlightHolder != null)
+                        vrInteractable.WasHovering = vrInteractable.IsHovering;
+                        vrInteractable.HoveringHandEntities.Remove(evt.HandEntity);
+                        if (vrInteractable.HoveringHandEntities.Count == 0)
                         {
-                            GameObject.Destroy(vrInteractable.HighlightHolder);
+                            vrInteractable.IsHovering = false;
+                            if (vrInteractable.HighlightOnHover && vrInteractable.HighlightHolder != null)
+                            {
+                                GameObject.Destroy(vrInteractable.HighlightHolder);
+                            }
                         }
                     }
                 }).AddTo(subscriptions);

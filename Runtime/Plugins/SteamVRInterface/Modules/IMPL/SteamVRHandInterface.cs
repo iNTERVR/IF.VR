@@ -430,7 +430,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Modules
                     attachView.SetActive(true);
                 }
 
-                eventSystem.Publish(new OnDetachedToHandEvent() { HandEntity = handEntity });
+                eventSystem.Publish(new OnDetachedToHandEvent() { HandEntity = handEntity, AttachedEntity = attachEntity });
 
                 entityDatabase.RemoveEntity(attachedInfoEntity);
 
