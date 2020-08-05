@@ -26,19 +26,19 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
         private readonly InterVRInstaller.Settings settings;
         private readonly SteamVRInterfaceInstaller.Settings steamVRSettings;
         private readonly IGameObjectTool gameObjectTool;
-        private readonly IInterVRInterface VRInterface;
+        private readonly IInterVRInterface vrInterface;
         private readonly IEntityDatabase entityDatabase;
 
         public SteamVRRigSystem(InterVRInstaller.Settings settings,
             SteamVRInterfaceInstaller.Settings steamVRSettings,
             IGameObjectTool gameObjectTool,
-            IInterVRInterface VRInterface,
+            IInterVRInterface vrInterface,
             IEntityDatabase entityDatabase)
         {
             this.settings = settings;
             this.steamVRSettings = steamVRSettings;
             this.gameObjectTool = gameObjectTool;
-            this.VRInterface = VRInterface;
+            this.vrInterface = vrInterface;
             this.entityDatabase = entityDatabase;
         }
 
@@ -48,8 +48,8 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
             subscriptionsPerEntity.Add(entity, subscriptions);
 
             var vrRig = entity.GetComponent<InterVRRig>();
-            vrRig.HMD.SetActive(false);
-            vrRig.HMDFallback.SetActive(false);
+            vrRig.HMDRoot.gameObject.SetActive(false);
+            vrRig.HMDFallbackRoot.gameObject.SetActive(false);
             var steamVRParent = vrRig.HMD.transform;
 
             // create [SteamVR] (actualy init)
@@ -57,11 +57,24 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
             gameObjectTool.InstantiateWithInit(steamVRPrefab, steamVRParent);
 
             Observable.EveryUpdate()
-                .Where(x => VRInterface.SteamVRInitialized())
+                .Where(x => vrInterface.SteamVRInitialized())
                 .First()
                 .Subscribe(x =>
                 {
-                    VRInterface.CurrentRigType = InterVRRigType.VR;
+                    if (!vrInterface.SteamVRValid())
+                    {
+                        vrInterface.CurrentRigType = InterVRRigType.Fallback;
+                    }
+                    else
+                    {
+                        vrInterface.CurrentRigType = vrRig.StartRigType;
+                    }
+
+                    if (vrRig.AudioListenerTransform != null)
+                    {
+                        gameObjectTool.SetParentWithInit(vrRig.AudioListenerTransform.gameObject, vrInterface.HMDTransform);
+                    }
+
                     var playVolumePrefab = steamVRSettings.PlayVolume;
                     gameObjectTool.InstantiateWithInit(playVolumePrefab, steamVRParent);
                 }).AddTo(subscriptions);

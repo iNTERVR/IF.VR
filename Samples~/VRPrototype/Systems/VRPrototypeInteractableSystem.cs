@@ -53,82 +53,108 @@ namespace Inter.VR.VRPrototype.Systems
             eventSystem.Receive<OnHandHoverBeginEvent>()
                 .Subscribe(evt =>
                 {
-                    var vrHandView = evt.HandEntity.GetGameObject();
-                    vrPrototypeInteractable.GeneralText.text = "Hovering hand: " + vrHandView.name;
+                    if (evt.HoveringEntity.Id == entity.Id)
+                    {
+                        var vrHandView = evt.HandEntity.GetGameObject();
+                        vrPrototypeInteractable.GeneralText.text = "Hovering hand: " + vrHandView.name;
+                    }
                 }).AddTo(subscriptions);
 
             eventSystem.Receive<OnHandHoverEndEvent>()
                 .Subscribe(evt =>
                 {
-                    vrPrototypeInteractable.GeneralText.text = "No Hand Hovering";
+                    if (evt.HoveringEntity.Id == entity.Id)
+                    {
+                        vrPrototypeInteractable.GeneralText.text = "No Hand Hovering";
+                    }
                 }).AddTo(subscriptions);
 
             eventSystem.Receive<OnHandHoverUpdateEvent>()
                 .Subscribe(evt =>
                 {
-                    var vrInteractableEntity = entity;
                     var vrHandEntity = evt.HandEntity;
                     var vrHand = evt.HandEntity.GetComponent<InterVRHand>();
-                    var startingHandGrabType = vrHandGrabStatus.GetGrabStarting(vrHandEntity);
-                    bool isGrabEnding = vrHandGrabStatus.IsGrabEnding(vrHandEntity, vrInteractableEntity);
-
-                    if (vrInteractable.AttachedToHandEntity == null && startingHandGrabType != HandGrabTypes.None)
+                    if (vrHand.HoveringInteractableEntity.Id == entity.Id)
                     {
-                        // Save our position/rotation so that we can restore it when we detach
-                        vrPrototypeInteractable.OldPosition = vrPrototypeInteractableView.transform.position;
-                        vrPrototypeInteractable.OldRotation = vrPrototypeInteractableView.transform.rotation;
+                        var vrInteractableEntity = entity;
+                        var startingHandGrabType = vrHandGrabStatus.GetGrabStarting(vrHandEntity);
+                        bool isGrabEnding = vrHandGrabStatus.IsGrabEnding(vrHandEntity, vrInteractableEntity);
 
-                        // Call this to continue receiving HandHoverUpdate messages,
-                        // and prevent the hand from hovering over anything else
-                        vrInterface.HandHoverLock(vrHandEntity, vrInteractableEntity);
+                        if (vrInteractable.AttachedToHandEntity == null && startingHandGrabType != HandGrabTypes.None)
+                        {
+                            // Save our position/rotation so that we can restore it when we detach
+                            vrPrototypeInteractable.OldPosition = vrPrototypeInteractableView.transform.position;
+                            vrPrototypeInteractable.OldRotation = vrPrototypeInteractableView.transform.rotation;
 
-                        // Attach this object to the hand
-                        vrHandInterface.AttachToHand(vrHandEntity, vrInteractableEntity, startingHandGrabType, vrPrototypeInteractable.AttachmentFlags);
-                    }
-                    else if (isGrabEnding)
-                    {
-                        // Detach this object from the hand
-                        vrHandInterface.DetachFromHand(vrHandEntity, vrInteractableEntity);
+                            // Call this to continue receiving HandHoverUpdate messages,
+                            // and prevent the hand from hovering over anything else
+                            vrInterface.HandHoverLock(vrHandEntity, vrInteractableEntity);
 
-                        // Call this to undo HoverLock
-                        vrInterface.HandHoverUnlock(vrHandEntity, vrInteractableEntity);
+                            // Attach this object to the hand
+                            vrHandInterface.AttachToHand(vrHandEntity, vrInteractableEntity, startingHandGrabType, vrPrototypeInteractable.AttachmentFlags);
+                        }
+                        else if (isGrabEnding)
+                        {
+                            // Detach this object from the hand
+                            vrHandInterface.DetachFromHand(vrHandEntity, vrInteractableEntity);
 
-                        // Restore position/rotation
-                        vrPrototypeInteractableView.transform.position = vrPrototypeInteractable.OldPosition;
-                        vrPrototypeInteractableView.transform.rotation = vrPrototypeInteractable.OldRotation;
+                            // Call this to undo HoverLock
+                            vrInterface.HandHoverUnlock(vrHandEntity, vrInteractableEntity);
+
+                            // Restore position/rotation
+                            vrPrototypeInteractableView.transform.position = vrPrototypeInteractable.OldPosition;
+                            vrPrototypeInteractableView.transform.rotation = vrPrototypeInteractable.OldRotation;
+                        }
                     }
                 }).AddTo(subscriptions);
 
             eventSystem.Receive<OnAttachedToHandEvent>()
                 .Subscribe(evt =>
                 {
-                    var vrHandView = evt.HandEntity.GetGameObject();
-                    vrPrototypeInteractable.GeneralText.text = string.Format("Attached: {0}", vrHandView.name);
-                    vrPrototypeInteractable.AttachTime = Time.time;
+                    var attachedInfoEntity = vrHandInterface.GetLastAttachedInfoEntity(evt.HandEntity);
+                    var attachedInfo = attachedInfoEntity.GetComponent<InterVRHandAttachedInfo>();
+                    if (attachedInfo.AttachedEntity.Id == entity.Id)
+                    {
+                        var vrHandView = evt.HandEntity.GetGameObject();
+                        vrPrototypeInteractable.GeneralText.text = string.Format("Attached: {0}", vrHandView.name);
+                        vrPrototypeInteractable.AttachTime = Time.time;
+                    }
                 }).AddTo(subscriptions);
 
             eventSystem.Receive<OnDetachedToHandEvent>()
                 .Subscribe(evt =>
                 {
-                    var vrHandView = evt.HandEntity.GetGameObject();
-                    vrPrototypeInteractable.GeneralText.text = string.Format("Detached: {0}", vrHandView.name);
+                    if (evt.AttachedEntity != null && evt.AttachedEntity.Id == entity.Id)
+                    {
+                        var vrHandView = evt.HandEntity.GetGameObject();
+                        vrPrototypeInteractable.GeneralText.text = string.Format("Detached: {0}", vrHandView.name);
+                    }
                 }).AddTo(subscriptions);
 
             eventSystem.Receive<OnHandAttachedUpdateEvent>()
                 .Subscribe(evt =>
                 {
-                    var vrHandView = evt.HandEntity.GetGameObject();
-                    vrPrototypeInteractable.GeneralText.text = string.Format("Attached: {0} :: Time: {1:F2}", vrHandView.name, (Time.time - vrPrototypeInteractable.AttachTime));
+                    if (evt.AttachedEntity != null && evt.AttachedEntity.Id == entity.Id)
+                    {
+                        var vrHandView = evt.HandEntity.GetGameObject();
+                        vrPrototypeInteractable.GeneralText.text = string.Format("Attached: {0} :: Time: {1:F2}", vrHandView.name, (Time.time - vrPrototypeInteractable.AttachTime));
+                    }
                 }).AddTo(subscriptions);
 
             eventSystem.Receive<OnHandFocusLostEvent>()
                 .Subscribe(evt =>
                 {
+                    if (evt.AttachedEntity != null && evt.AttachedEntity.Id == entity.Id)
+                    {
+                    }
                 }).AddTo(subscriptions);
 
             eventSystem.Receive<OnHandFocusAcquiredEvent>()
                 .Subscribe(evt =>
                 {
+                    if (evt.AttachedEntity != null && evt.AttachedEntity.Id == entity.Id)
+                    {
+                    }
                 }).AddTo(subscriptions);
 
             Observable.EveryUpdate()

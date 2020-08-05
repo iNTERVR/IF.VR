@@ -90,7 +90,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Modules
             var currentAttachedEntity = GetLastAttachedInfoEntity(vrHandEntity);
             if (currentAttachedEntity != null)
             {
-                eventSystem.Publish(new OnHandFocusLostEvent() { HandEntity = vrHandEntity });
+                eventSystem.Publish(new OnHandFocusLostEvent() { HandEntity = vrHandEntity, AttachedEntity = currentAttachedEntity });
             }
 
             vrHandAttachedInfo.AttachedEntity = attachEntity;
@@ -444,7 +444,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Modules
                 {
                     var newTopEntityView = newTopEntity.GetGameObject();
                     newTopEntityView.SetActive(true);
-                    eventSystem.Publish(new OnHandFocusAcquiredEvent() { HandEntity = handEntity });
+                    eventSystem.Publish(new OnHandFocusAcquiredEvent() { HandEntity = handEntity, AttachedEntity = newTopEntity });
                 }
             }
 

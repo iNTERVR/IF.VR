@@ -12,6 +12,8 @@ namespace Inter.VR.VRGlovePrototype
 {
     public class VRGlovePrototypeBootstrap : EcsRxApplicationBehaviour
     {
+        public bool UseGlove;
+
         protected override void BindSystems()
         {
             base.BindSystems();
@@ -30,7 +32,8 @@ namespace Inter.VR.VRGlovePrototype
             base.LoadPlugins();
 
             RegisterPlugin(new SteamVRInterfacePlugin());
-            RegisterPlugin(new ManusVRGloveInterfacePlugin());
+            if (UseGlove)
+                RegisterPlugin(new ManusVRGloveInterfacePlugin());
         }
 
         protected override void ApplicationStarted()
@@ -38,6 +41,13 @@ namespace Inter.VR.VRGlovePrototype
             var settings = Container.Resolve<VRGlovePrototypeInstaller.Settings>();
             var interSettings = Container.Resolve<InterInstaller.Settings>();
             Debug.Log($"settings.Name is {settings.Name} in {interSettings.Name}");
+
+            if (UseGlove)
+            {
+                var vrGloveInterface = Container.Resolve<IInterVRGloveInterface>();
+                vrGloveInterface.HandYawOffsetLeft.Value = settings.HandYawOffsetLeft;
+                vrGloveInterface.HandYawOffsetRight.Value = settings.HandYawOffsetRight;
+            }
         }
 
         private void OnDestroy()

@@ -182,13 +182,13 @@ namespace Inter.VR.Modules.InterVRInterfaces
                     {
                         if (currentRigType == InterVRRigType.Fallback)
                         {
-                            rig.HMD.SetActive(false);
-                            rig.HMDFallback.SetActive(true);
+                            rig.HMDRoot.gameObject.SetActive(false);
+                            rig.HMDFallbackRoot.gameObject.SetActive(true);
                         }
                         else
                         {
-                            rig.HMD.SetActive(true);
-                            rig.HMDFallback.SetActive(false);
+                            rig.HMDRoot.gameObject.SetActive(true);
+                            rig.HMDFallbackRoot.gameObject.SetActive(false);
                         }
                     }
                 }

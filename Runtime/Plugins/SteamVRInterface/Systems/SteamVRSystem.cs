@@ -32,7 +32,7 @@ namespace Inter.VR.Plugins.SteamVRInterface.Systems
         {
             Observable.EveryUpdate()
                 .First()
-                .Where(x => vrInterface.SteamVRInitialized())
+                .Where(x => vrInterface.SteamVRInitializedAndValid())
                 .Subscribe(x =>
                 {
                     vrInterface.HeadsetOnHead.Value = getHeadsetOnHead();

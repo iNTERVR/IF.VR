@@ -384,10 +384,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 260467135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 441e8de363ba5bc4d82440f97726bf72, type: 3}
+  m_Script: {fileID: 11500000, guid: 97a51a1118e6e73448b373ae18eee104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 30
+  GeneralText: {fileID: 1758625706}
+  HoveringText: {fileID: 2139910033}
+  AttachmentFlags: 44
 --- !u!114 &260467139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1695,7 +1697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers:
-  - {fileID: 11400000, guid: 320d328b8bba08b4cba38e875e1c0aff, type: 2}
+  - {fileID: 11400000, guid: 2a89deb1ed1e2b3449760a3755d6793e, type: 2}
   _monoInstallers: []
   _installerPrefabs: []
   _autoRun: 1
@@ -1737,7 +1739,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1017536518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 106baef945af1544c9afa3e8c3c3c140, type: 3}
+  m_Script: {fileID: 11500000, guid: 04b98c0cbfe3398418fa621ac9f25cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1098866446

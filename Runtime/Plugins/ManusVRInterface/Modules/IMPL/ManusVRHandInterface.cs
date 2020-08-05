@@ -103,7 +103,7 @@ namespace Inter.VR.Plugins.ManusVRInterface.Modules
             var currentAttachedEntity = GetLastAttachedInfoEntity(vrHandEntity);
             if (currentAttachedEntity != null)
             {
-                eventSystem.Publish(new OnHandFocusLostEvent() { HandEntity = vrHandEntity });
+                eventSystem.Publish(new OnHandFocusLostEvent() { HandEntity = vrHandEntity, AttachedEntity = currentAttachedEntity });
             }
 
             vrHandAttachedInfo.AttachedEntity = attachEntity;

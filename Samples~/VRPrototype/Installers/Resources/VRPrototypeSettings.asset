@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68996b072ef923343828b3ffde59b6c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c13dcb0a2bf592428fa5b0fe594e27b, type: 3}
   m_Name: VRPrototypeSettings
   m_EditorClassIdentifier: 
   settings:

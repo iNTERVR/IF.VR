@@ -7,5 +7,6 @@ namespace Inter.VR.Events
     public class OnHandAttachedUpdateEvent
     {
         public IEntity HandEntity;
+        public IEntity AttachedEntity;
     }
 }

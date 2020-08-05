@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.0.4] - 2020-08-05
+### Update
+- VRGlovePrototype Sample
+- VRPrototype Sample
+
 ## [1.0.3] - 2020-08-05
 ### Fixed
 - OnDetachedToHandEvent bug fixed

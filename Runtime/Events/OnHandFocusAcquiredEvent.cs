@@ -7,5 +7,6 @@ namespace Inter.VR.Events
     public class OnHandFocusAcquiredEvent
     {
         public IEntity HandEntity;
+        public IEntity AttachedEntity;
     }
 }
