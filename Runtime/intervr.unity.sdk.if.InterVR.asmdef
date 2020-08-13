@@ -1,5 +1,5 @@
 {
-    "name": "if.InterVR",
+    "name": "intervr.unity.sdk.if.InterVR",
     "references": [
         "GUID:4773707006d2fca42a234f263874271d",
         "GUID:0715616b45e7840468dd5ab65e52f66d",

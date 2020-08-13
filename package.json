@@ -2,7 +2,7 @@
   "name": "com.intervr.unity.sdk.if.inter.vr",
   "displayName": "if.InterVR of iNTERVR Unity3D SDK",
   "description": "iNTERVR framework -  - VR package, supported plugins are steamvr, manusvr and UnityXR",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "unity": "2019.4",
   "keywords": [
   ],
@@ -21,7 +21,8 @@
     "url": "https://github.com/iNTERVR"
   },
   "dependencies": {
-    "com.intervr.unity.sdk.if.inter": "0.1.0"
+    "com.intervr.unity.sdk.if.inter": "0.1.0",
+    "com.intervr.unity.extern.manusvr": "0.1.1"
   },
   "files": [
     "*.md",
