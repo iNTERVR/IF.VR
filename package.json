@@ -1,18 +1,37 @@
 {
-  "name": "com.intervr.if.intervr",
-  "version": "1.0.4",
-  "displayName": "if InterVR",
-  "description": "iNTERVR framework - VR package, supported plugins are steamvr, manusvr and UnityXR",
+  "name": "com.intervr.unity.sdk.if.inter.vr",
+  "displayName": "if.InterVR of iNTERVR Unity3D SDK",
+  "description": "iNTERVR framework -  - VR package, supported plugins are steamvr, manusvr and UnityXR",
+  "version": "0.1.0",
   "unity": "2019.4",
-  "license": "MIT",
-  "dependencies": {
-    "com.intervr.if.inter": "https://github.com/iNTERVR/if.Inter.git",
-    "com.intervr.manusvr": "https://github.com/iNTERVR/ManusVR.git#upm",
-    "com.intervr.ecsrx": "https://github.com/iNTERVR/ecsrx.git#upm",
-    "com.intervr.ecsrx.unity": "https://github.com/iNTERVR/ecsrx.unity.git#upm",
-    "com.intervr.neuecc.unirx": "https://github.com/iNTERVR/UniRx.git#upm",
-    "com.intervr.modesttree.zenject": "https://github.com/iNTERVR/Zenject.git#upm"
+  "keywords": [
+  ],
+  "homepage": "https://github.com/iNTERVR/unity.sdk.if.inter#readme",
+  "bugs": {
+    "url": "https://github.com/iNTERVR/unity.sdk.if.inter/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iNTERVR/unity.sdk.if.inter.git#upm"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "iNTERVR",
+    "email": "ckbang7@gmail.com",
+    "url": "https://github.com/iNTERVR"
+  },
+  "dependencies": {
+    "com.intervr.unity.sdk.if.inter": "0.1.0"
+  },
+  "files": [
+    "*.md",
+    "*.meta",
+    "*.asmdef",
+    "*.xml",
+    "Editor",
+    "Runtime",
+    "Samples~"
+  ],
   "samples": [
     {
       "displayName": "VR Prototype",
