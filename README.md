@@ -20,6 +20,10 @@ if.InterVR은 iNTERVR에서 [유니티]를 기반으로 하여 제작된 소프�
   * `Player`설정 패널에서 `Other Settings`를 펼칩니다.
   * `Scripting Runtime Version`이 `.NET 4.x`로 설정되었는지 확인합니다.
 
+## SteamVR SDK 설치
+
+* Asset Store를 통해서 SteamVR 2.6.1 (sdk 1.13.10)을 설치합니다.
+
 ## 유니티 프로젝트 매니페스트에 패키지 추가하기
 
 * 프로젝트의 `Packages`디렉토리를 탐색합니다.
