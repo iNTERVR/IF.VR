@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     Name: VGloveRPrototype Installer
-    HandYawOffsetLeft: 0
-    HandYawOffsetRight: 0
+    HandYawOffsetLeft: 180
+    HandYawOffsetRight: 180

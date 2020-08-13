@@ -17,6 +17,13 @@ namespace Inter.VR.VRGlovePrototype
         protected override void BindSystems()
         {
             base.BindSystems();
+
+            Container.BindApplicableSystems(
+                "Inter.Systems",
+                "Inter.ViewResolvers");
+            Container.BindApplicableSystems(
+                "Inter.VR.Systems",
+                "Inter.VR.ViewResolvers");
         }
 
         protected override void LoadModules()
