@@ -59,6 +59,6 @@ SteamVR은 iNTERVR의 외부 [ValveSoftware]에서 [유니티]를 기반으로 �
 위의 과정을 통해 얻은 패키지는 유니티 패키지 매니저 UI에 나타날 것입니다. 이후로 유니티 패키지 매니저 UI 상에서 업데이트가 가능할 경우 `Update` 버튼이 활성화 되며 이를 클릭할 시 해당 버전으로 자동 업데이트 됩니다.
 
 [유니티]: https://unity3d.com/
-[최신-릴리즈(NPM)]: https://www.npmjs.com/package/com.intervr.unity.sdk.if.inter.vr
+[최신-릴리즈(NPM)]: https://www.npmjs.com/package/com.intervr.unity.extern.steamvr
 [프로젝트-매니페스트]: https://docs.unity3d.com/Manual/upm-manifestPrj.html
 [ValveSoftware]: https://github.com/ValveSoftware/steamvr_unity_plugin
