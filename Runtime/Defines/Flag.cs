@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Inter.VR.Defines
+namespace InterVR.Unity.SDK.SteamVR.Defines
 {
     // The flags used to determine how an object is attached to the hand.
     [Flags]

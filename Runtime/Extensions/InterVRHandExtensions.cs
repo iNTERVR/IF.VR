@@ -3,13 +3,13 @@ using EcsRx.Extensions;
 using EcsRx.Groups;
 using EcsRx.Unity.Extensions;
 using EcsRx.Zenject;
-using Inter.VR.Components;
-using Inter.VR.Defines;
-using Inter.VR.Events;
+using InterVR.Unity.SDK.SteamVR.Components;
+using InterVR.Unity.SDK.SteamVR.Defines;
+using InterVR.Unity.SDK.SteamVR.Events;
 using System.Linq;
 using UnityEngine;
 
-namespace Inter.VR.Extensions
+namespace InterVR.Unity.SDK.SteamVR.Extensions
 {
     public static class InterVRHandExtensions
     {

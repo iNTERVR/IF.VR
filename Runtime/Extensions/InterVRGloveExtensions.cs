@@ -1,6 +1,6 @@
-﻿using Inter.VR.Components;
+﻿using InterVR.Unity.SDK.SteamVR.Components;
 
-namespace Inter.VR.Extensions
+namespace InterVR.Unity.SDK.SteamVR.Extensions
 {
     public static class InterVRGloveExtensions
     {

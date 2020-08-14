@@ -1,17 +1,17 @@
 {
   "name": "com.intervr.unity.extern.steamvr",
   "displayName": "SteamVR of iNTERVR Unity3D SDK",
-  "description": "iNTERVR framework -  - VR package, supported plugins are steamvr, manusvr and UnityXR",
+  "description": "iNTERVR Framework",
   "version": "0.2.0",
-  "unity": "2020.4",
+  "unity": "2020.1",
   "keywords": [],
-  "homepage": "https://github.com/iNTERVR/unity.sdk.if.inter#readme",
+  "homepage": "https://github.com/iNTERVR/unity.extern.steamvr#readme",
   "bugs": {
-    "url": "https://github.com/iNTERVR/unity.sdk.if.inter/issues"
+    "url": "https://github.com/iNTERVR/unity.extern.steamvr/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iNTERVR/unity.sdk.if.inter.git#upm"
+    "url": "git+https://github.com/iNTERVR/unity.extern.steamvr.git#upm"
   },
   "license": "MIT",
   "author": {
@@ -20,8 +20,7 @@
     "url": "https://github.com/iNTERVR"
   },
   "dependencies": {
-    "com.intervr.unity.sdk.if": "0.2.0",
-    "com.intervr.unity.extern.manusvr": "0.1.1"
+    "com.intervr.if": "0.1.0"
   },
   "files": [
     "*.md",
@@ -37,11 +36,6 @@
       "displayName": "VR Prototype",
       "description": "InterFramework VR Template",
       "path": "Samples~/VRPrototype"
-    },
-    {
-      "displayName": "VR Glove Prototype",
-      "description": "InterFramework VR Glove Template",
-      "path": "Samples~/VRGlovePrototype"
     }
   ]
 }

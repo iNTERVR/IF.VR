@@ -1,11 +1,12 @@
-﻿using System;
+﻿using InterVR.Unity.SDK.SteamVR.Defines;
+using System;
 using UnityEngine;
 using Zenject;
 
-namespace Inter.VR.Plugins.ManusVRInterface.Installer
+namespace InterVR.Unity.SDK.SteamVR.Installer
 {
-    [CreateAssetMenu(fileName = "ManusVRInterfaceSettings", menuName = "Inter/VR/Plugin/ManusVRInterface/Settings")]
-    public class ManusVRInterfaceInstaller : ScriptableObjectInstaller<ManusVRInterfaceInstaller>
+    [CreateAssetMenu(fileName = "SteamVRSettings", menuName = "InterVR/SteamVR/Settings")]
+    public class SteamVRInstaller : ScriptableObjectInstaller<SteamVRInstaller>
     {
 #pragma warning disable 0649
         [SerializeField]
@@ -20,6 +21,7 @@ namespace Inter.VR.Plugins.ManusVRInterface.Installer
         [Serializable]
         public class Settings
         {
+            public string Name = "SteamVR Installer";
         }
     }
 }

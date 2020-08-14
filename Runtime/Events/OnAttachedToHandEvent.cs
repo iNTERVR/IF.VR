@@ -1,6 +1,6 @@
 ﻿using EcsRx.Entities;
 
-namespace Inter.VR.Events
+namespace InterVR.Unity.SDK.SteamVR.Events
 {
     public class OnAttachedToHandEvent
     {

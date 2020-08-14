@@ -1,8 +1,8 @@
 ﻿using EcsRx.Entities;
-using Inter.VR.Defines;
+using InterVR.Unity.SDK.SteamVR.Defines;
 using Valve.VR;
 
-namespace Inter.VR.Events
+namespace InterVR.Unity.SDK.SteamVR.Events
 {
     public class OnHandAttachedUpdateEvent
     {

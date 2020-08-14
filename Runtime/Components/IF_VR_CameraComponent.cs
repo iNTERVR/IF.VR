@@ -1,16 +1,16 @@
-﻿using Inter.VR.Defines;
+﻿using InterVR.Unity.SDK.SteamVR.Defines;
 using EcsRx.Components;
 using EcsRx.Entities;
 using EcsRx.Extensions;
 using UnityEngine;
 
-namespace Inter.VR.Components
+namespace InterVR.Unity.SDK.SteamVR.Components
 {
     public class InterVRCamera : IComponent
     {
     }
 
-    public class InterVRCameraComponent : MonoBehaviour, IConvertToEntity
+    public class IF_VR_CameraComponent : MonoBehaviour, IConvertToEntity
     {
         public void Convert(IEntity entity, IComponent component = null)
         {

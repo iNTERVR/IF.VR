@@ -1,4 +1,4 @@
-﻿namespace Inter.VR.Defines
+﻿namespace InterVR.Unity.SDK.SteamVR.Defines
 {
     public enum InterVRHandType
     {

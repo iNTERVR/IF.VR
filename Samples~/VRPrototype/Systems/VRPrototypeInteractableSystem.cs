@@ -1,6 +1,6 @@
-﻿using Inter.VR.Components;
-using Inter.VR.Defines;
-using Inter.VR.Modules.InterVRInterfaces;
+﻿using InterVR.Unity.SDK.SteamVR.Components;
+using InterVR.Unity.SDK.SteamVR.Defines;
+using InterVR.Unity.SDK.SteamVR.Modules.InterVRInterfaces;
 using EcsRx.Entities;
 using EcsRx.Extensions;
 using EcsRx.Groups;
@@ -11,11 +11,11 @@ using UniRx;
 using System.Collections.Generic;
 using UnityEngine;
 using EcsRx.Events;
-using Inter.VR.Events;
+using InterVR.Unity.SDK.SteamVR.Events;
 using EcsRx.Unity.Extensions;
-using Inter.VR.VRPrototype.Components;
+using InterVR.Extern.SteamVR.VRPrototype.Components;
 
-namespace Inter.VR.VRPrototype.Systems
+namespace InterVR.Extern.SteamVR.VRPrototype.Systems
 {
     public class VRPrototypeInteractableSystem : ISetupSystem, ITeardownSystem
     {

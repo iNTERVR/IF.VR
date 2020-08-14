@@ -1,4 +1,4 @@
-﻿using Inter.VR.Defines;
+﻿using InterVR.Unity.SDK.SteamVR.Defines;
 using EcsRx.Components;
 using EcsRx.Entities;
 using EcsRx.Extensions;
@@ -8,7 +8,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using EcsRx.Unity.Extensions;
 
-namespace Inter.VR.Components
+namespace InterVR.Unity.SDK.SteamVR.Components
 {
     public class InterVRHand : IComponent, IDisposable
     {

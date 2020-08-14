@@ -1,4 +1,4 @@
-﻿using Inter.VR.Defines;
+﻿using InterVR.Unity.SDK.SteamVR.Defines;
 using EcsRx.Components;
 using EcsRx.Entities;
 using EcsRx.Extensions;
@@ -6,7 +6,7 @@ using System;
 using UniRx;
 using UnityEngine;
 
-namespace Inter.VR.Components
+namespace InterVR.Unity.SDK.SteamVR.Components
 {
     public class InterVRGlove : IComponent, IDisposable
     {

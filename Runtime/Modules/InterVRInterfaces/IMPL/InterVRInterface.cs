@@ -1,19 +1,19 @@
-﻿using Inter.VR.Defines;
+﻿using InterVR.Unity.SDK.SteamVR.Defines;
 using EcsRx.Entities;
 using System;
 using UniRx;
 using UnityEngine;
 using EcsRx.Collections.Database;
 using EcsRx.Groups;
-using Inter.VR.Components;
+using InterVR.Unity.SDK.SteamVR.Components;
 using EcsRx.Extensions;
 using EcsRx.Unity.Extensions;
 using System.Linq;
 using EcsRx.Events;
-using Inter.VR.Events;
+using InterVR.Unity.SDK.SteamVR.Events;
 using EcsRx.Unity.MonoBehaviours;
 
-namespace Inter.VR.Modules.InterVRInterfaces
+namespace InterVR.Unity.SDK.SteamVR.Modules.InterVRInterfaces
 {
     public class InterVRInterface : IInterVRInterface, IDisposable
     {

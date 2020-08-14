@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace Inter.VR.VRPrototype.Installer
+namespace InterVR.Extern.SteamVR.VRPrototype.Installer
 {
     [CreateAssetMenu(fileName = "VRPrototypeSettings", menuName = "Inter/Mods/VRPrototype/Settings")]
     public class VRPrototypeInstaller : ScriptableObjectInstaller<VRPrototypeInstaller>

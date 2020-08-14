@@ -1,10 +1,10 @@
 ﻿using EcsRx.Components;
 using EcsRx.Entities;
 using EcsRx.Extensions;
-using Inter.VR.Defines;
+using InterVR.Unity.SDK.SteamVR.Defines;
 using UnityEngine;
 
-namespace Inter.VR.Components
+namespace InterVR.Unity.SDK.SteamVR.Components
 {
     public class InterVRRig : IComponent
     {

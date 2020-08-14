@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using Zenject;
 
-namespace Inter.VR.Installer
+namespace InterVR.Unity.SDK.SteamVR.Installer
 {
-    public class InterVRMonoInstaller : MonoInstaller<InterVRMonoInstaller>
+    public class SteamVRMonoInstaller : MonoInstaller<SteamVRMonoInstaller>
     {
         public List<ScriptableObjectInstaller> settings;
 

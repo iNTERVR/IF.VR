@@ -1,10 +1,10 @@
-﻿using Inter.VR.Components;
-using Inter.VR.Defines;
+﻿using InterVR.Unity.SDK.SteamVR.Components;
+using InterVR.Unity.SDK.SteamVR.Defines;
 using EcsRx.Entities;
 using UniRx;
 using UnityEngine;
 
-namespace Inter.VR.Modules.InterVRInterfaces
+namespace InterVR.Unity.SDK.SteamVR.Modules.InterVRInterfaces
 {
     public interface IInterVRGloveInterface
     {

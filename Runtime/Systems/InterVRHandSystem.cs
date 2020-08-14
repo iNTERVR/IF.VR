@@ -1,9 +1,9 @@
-﻿using Inter.Components;
-using Inter.Modules.ToolModule;
-using Inter.VR.Components;
-using Inter.VR.Extensions;
-using Inter.VR.Modules.InterVRInterfaces;
-using Inter.VR.Installer;
+﻿using InterVR.IF.Components;
+using InterVR.IF.Modules;
+using InterVR.Unity.SDK.SteamVR.Components;
+using InterVR.Unity.SDK.SteamVR.Extensions;
+using InterVR.Unity.SDK.SteamVR.Modules.InterVRInterfaces;
+using InterVR.Unity.SDK.SteamVR.Installer;
 using EcsRx.Collections.Database;
 using EcsRx.Entities;
 using EcsRx.Events;
@@ -16,25 +16,25 @@ using System;
 using System.Linq;
 using UniRx;
 using UnityEngine;
-using Inter.Blueprints;
-using Inter.Defines;
+using InterVR.IF.Blueprints;
+using InterVR.IF.Defines;
 using System.Collections.Generic;
 using UniRx.Triggers;
 
-namespace Inter.VR.Systems
+namespace InterVR.Unity.SDK.SteamVR.Systems
 {
     public class InterVRHandSystem : ISetupSystem, ITeardownSystem
     {
         public IGroup Group => new Group(typeof(InterVRHand), typeof(ViewComponent));
 
         private Dictionary<IEntity, List<IDisposable>> subscriptionsPerEntity = new Dictionary<IEntity, List<IDisposable>>();
-        private readonly InterVRInstaller.Settings settings;
+        private readonly SteamVRInstaller.Settings settings;
         private readonly IGameObjectTool gameObjectTool;
         private readonly IInterVRInterface vrInterface;
         private readonly IEntityDatabase entityDatabase;
         private readonly IEventSystem eventSystem;
 
-        public InterVRHandSystem(InterVRInstaller.Settings settings,
+        public InterVRHandSystem(SteamVRInstaller.Settings settings,
             IGameObjectTool gameObjectTool,
             IInterVRInterface vrInterface,
             IEntityDatabase entityDatabase,
@@ -107,7 +107,7 @@ namespace Inter.VR.Systems
                         }
                     });
 
-                    pool.CreateEntity(new InterFollowEntityBlueprint(UpdateMomentType.Update,
+                    pool.CreateEntity(new IF_FollowEntityBlueprint(UpdateMomentType.Update,
                         vrHandTrackerEntity,
                         entity,
                         true,

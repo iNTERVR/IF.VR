@@ -1,7 +1,7 @@
 ﻿using EcsRx.Infrastructure.Dependencies;
 using EcsRx.Infrastructure.Extensions;
 
-namespace Inter.VR.Modules.InterVRInterfaces
+namespace InterVR.Unity.SDK.SteamVR.Modules.InterVRInterfaces
 {
     public class InterVRInterfaceModuleSetupDependency : IDependencyModule
     {
