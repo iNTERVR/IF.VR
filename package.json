@@ -1,17 +1,17 @@
 {
-  "name": "com.intervr.unity.extern.steamvr",
-  "displayName": "SteamVR of iNTERVR Unity3D SDK",
-  "description": "iNTERVR Framework",
-  "version": "0.2.0",
+  "name": "com.intervr.if.vr",
+  "displayName": "iNTERVR IF VR",
+  "description": "iNTERVR Framework for VR",
+  "version": "0.3.0",
   "unity": "2020.1",
   "keywords": [],
-  "homepage": "https://github.com/iNTERVR/unity.extern.steamvr#readme",
+  "homepage": "https://github.com/iNTERVR/IF.VR#readme",
   "bugs": {
-    "url": "https://github.com/iNTERVR/unity.extern.steamvr/issues"
+    "url": "https://github.com/iNTERVR/IF.VR/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iNTERVR/unity.extern.steamvr.git#upm"
+    "url": "git+https://github.com/iNTERVR/IF.VR.git#upm"
   },
   "license": "MIT",
   "author": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/iNTERVR"
   },
   "dependencies": {
-    "com.intervr.if": "0.1.0"
+    "com.intervr.if": "0.6.0"
   },
   "files": [
     "*.md",
@@ -30,12 +30,5 @@
     "Editor",
     "Runtime",
     "Samples~"
-  ],
-  "samples": [
-    {
-      "displayName": "VR Prototype",
-      "description": "InterFramework VR Template",
-      "path": "Samples~/VRPrototype"
-    }
   ]
 }

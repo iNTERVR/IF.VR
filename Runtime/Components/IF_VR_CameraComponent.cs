@@ -1,12 +1,12 @@
-﻿using InterVR.Unity.SDK.SteamVR.Defines;
+﻿using InterVR.IF.VR.Defines;
 using EcsRx.Components;
 using EcsRx.Entities;
 using EcsRx.Extensions;
 using UnityEngine;
 
-namespace InterVR.Unity.SDK.SteamVR.Components
+namespace InterVR.IF.VR.Components
 {
-    public class InterVRCamera : IComponent
+    public class IF_VR_Camera : IComponent
     {
     }
 
@@ -14,7 +14,7 @@ namespace InterVR.Unity.SDK.SteamVR.Components
     {
         public void Convert(IEntity entity, IComponent component = null)
         {
-            var c = component == null ? new InterVRCamera() : component as InterVRCamera;
+            var c = component == null ? new IF_VR_Camera() : component as IF_VR_Camera;
 
             entity.AddComponentSafe(c);
 

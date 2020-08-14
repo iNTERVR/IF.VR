@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.3.0] - 2020-08-13
+
+### Changed
+
+- Change package name
+- Naming Convention
+
 ## [0.2.0] - 2020-08-13
 
 ### Changed
