@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.2.0] - 2020-08-13
+
+### Changed
+
+- Change package name
+
 ## [0.1.2] - 2020-08-13
 
 ### Fixed

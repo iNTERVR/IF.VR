@@ -1,5 +1,5 @@
 {
-    "name": "intervr.unity.sdk.if.InterVR.VRPrototype",
+    "name": "intervr.unity.extern.steamvr.VRPrototype",
     "references": [
         "GUID:4773707006d2fca42a234f263874271d",
         "GUID:15a5cf1e26de4e14da1eb3701fd8f4d6",
