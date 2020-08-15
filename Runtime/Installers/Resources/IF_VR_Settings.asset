@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 918857e55c514854b96969510eb6055c, type: 3}
-  m_Name: InterVRSettings
+  m_Name: IF_VR_Settings
   m_EditorClassIdentifier: 
   settings:
-    Name: Inter VR Installer
-    Start2DRigFallback: 0
+    Name: IF VR Installer

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1449065082320613366}
   - component: {fileID: 6059247965768424182}
   m_Layer: 0
-  m_Name: if.InterVR
+  m_Name: intervr.if.vr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,9 +40,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712070030827417687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5721c24fdabf3764da3b22a589061101, type: 3}
+  m_Script: {fileID: 11500000, guid: e6ad8895f1d5be84cac011b861f1707f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 11400000, guid: 5d989aba22eb9e649b81c38b11fca12c, type: 2}
-  - {fileID: 11400000, guid: 13690f2cead5ecc48a33ab61372351a4, type: 2}
+  - {fileID: 11400000, guid: 2c787f40331f48a4b850ee705618ec84, type: 2}

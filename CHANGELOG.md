@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.4.0] - 2020-08-15
+
+### Removed
+
+- Remove glove interface
+
 ## [0.3.0] - 2020-08-13
 
 ### Changed

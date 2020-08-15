@@ -248,18 +248,6 @@ namespace InterVR.IF.VR.Modules
             return null;
         }
 
-        public IEntity GetGloveEntity(IF_VR_HandType type)
-        {
-            var gloveEntities = entityDatabase.GetEntitiesFor(new Group(typeof(IF_VR_Glove)), 0);
-            foreach (var gloveEntity in gloveEntities)
-            {
-                var glove = gloveEntity.GetComponent<IF_VR_Glove>();
-                if (glove.Type == type)
-                    return gloveEntity;
-            }
-            return null;
-        }
-
         public IEntity GetCameraEntity()
         {
             return entityDatabase.GetEntitiesFor(new Group(typeof(IF_VR_Camera)), 0).FirstOrDefault();
