@@ -20,7 +20,7 @@
         Both        // both hands
     }
 
-    public enum IF_VR_HandGrabTypes
+    public enum IF_VR_GrabType
     {
         None,
         Grip,

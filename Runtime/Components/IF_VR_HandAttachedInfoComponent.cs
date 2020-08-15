@@ -15,7 +15,7 @@ namespace InterVR.IF.VR.Components
         public bool AttachedRigidbodyUsedGravity { get; set; }
         public GameObject OriginalParent { get; set; }
         public bool IsParentedToHand { get; set; }
-        public IF_VR_HandGrabTypes GrabbedWithType { get; set; }
+        public IF_VR_GrabType GrabbedWithType { get; set; }
         public IF_VR_HandAttachmentFlags AttachmentFlags { get; set; }
         public Vector3 InitialPositionalOffset { get; set; }
         public Quaternion InitialRotationalOffset { get; set; }
