@@ -2,8 +2,9 @@
 {
     public enum IF_VR_HandType
     {
+        Any,
         Left,
-        Right
+        Right,
     }
 
     public enum IF_VR_RigType

@@ -2,9 +2,9 @@
 
 namespace InterVR.IF.VR.Events
 {
-    public class IF_VR_OnHandHoverUpdateEvent
+    public class IF_VR_Event_HandAttachedUpdate
     {
+        public IEntity TargetEntity;
         public IEntity HandEntity;
-        public IEntity HoveringEntity;
     }
 }

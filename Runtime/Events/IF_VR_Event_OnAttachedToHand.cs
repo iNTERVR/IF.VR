@@ -2,9 +2,9 @@
 
 namespace InterVR.IF.VR.Events
 {
-    public class IF_VR_OnDetachedToHandEvent
+    public class IF_VR_Event_OnAttachedToHand
     {
+        public IEntity TargetEntity;
         public IEntity HandEntity;
-        public IEntity AttachedEntity;
     }
 }

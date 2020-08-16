@@ -4,10 +4,11 @@ using EcsRx.Entities;
 using EcsRx.Extensions;
 using UniRx;
 using UnityEngine;
+using System;
 
 namespace InterVR.IF.VR.Components
 {
-    public class IF_VR_HandTracker : IComponent
+    public class IF_VR_HandTracker : IComponent, IDisposable
     {
         public IF_VR_HandType Type { get; set; }
         public BoolReactiveProperty Registered { get; set; }    // 등록되었는가?
@@ -26,22 +27,6 @@ namespace InterVR.IF.VR.Components
             Registered.Dispose();
             Valid.Dispose();
             Active.Dispose();
-        }
-    }
-
-    public class IF_VR_HandTrackerComponent : MonoBehaviour, IConvertToEntity
-    {
-        public IF_VR_HandType Type;
-
-        public void Convert(IEntity entity, IComponent component = null)
-        {
-            var c = component == null ? new IF_VR_HandTracker() : component as IF_VR_HandTracker;
-
-            c.Type = Type;
-
-            entity.AddComponentSafe(c);
-
-            Destroy(this);
         }
     }
 }

@@ -2,9 +2,9 @@
 
 namespace InterVR.IF.VR.Events
 {
-    public class IF_VR_OnHandHoverEndEvent
+    public class IF_VR_Event_OnHandFocusLost
     {
+        public IEntity TargetEntity;
         public IEntity HandEntity;
-        public IEntity HoveringEntity;
     }
 }
