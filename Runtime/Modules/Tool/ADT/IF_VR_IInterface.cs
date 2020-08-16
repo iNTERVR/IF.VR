@@ -23,11 +23,5 @@ namespace InterVR.IF.VR.Modules
         IEntity GetHandRenderModelEntity(IF_VR_HandType type);
         IEntity GetHandControllerRenderModelEntity(IF_VR_HandType type);
         IEntity GetCameraEntity();
-
-        // Hovering
-        void UpdateHandHovering(IEntity handEntity);
-        void HandHoverLock(IEntity handEntity, IEntity interactableEntity);
-        void HandHoverUnlock(IEntity handEntity, IEntity interactableEntity);
-        void HandHoverUnlockForce(IEntity handEntity);
     }
 }

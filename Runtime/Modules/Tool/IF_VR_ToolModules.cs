@@ -7,7 +7,6 @@ namespace InterVR.IF.VR.Modules
     {
         public void Setup(IDependencyContainer container)
         {
-            container.Bind<IF_VR_IInterface, IF_VR_Interface>();
         }
     }
 }
