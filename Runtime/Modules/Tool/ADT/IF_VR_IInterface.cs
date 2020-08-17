@@ -9,19 +9,17 @@ namespace InterVR.IF.VR.Modules
     {
         BoolReactiveProperty HeadsetOnHead { get; }
         int HandCount { get; }
-        Transform HMDRootTransform { get; }
+        GameObject Rig { get; }
         Transform HMDTransform { get; }
         float EyeHeight { get; }
         Vector3 FeetPosition { get; }
         Vector3 BodyDirection { get; }
         Collider HeadCollider { get; }
-        IF_VR_RigType CurrentRigType { get; set; }
+        IF_VR_RigType CurrentRigType { get; }
 
         IEntity GetRigEntity();
         IEntity GetHandTrackerEntity(IF_VR_HandType type);
         IEntity GetHandEntity(IF_VR_HandType type);
-        IEntity GetHandRenderModelEntity(IF_VR_HandType type);
-        IEntity GetHandControllerRenderModelEntity(IF_VR_HandType type);
         IEntity GetCameraEntity();
     }
 }
