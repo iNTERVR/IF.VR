@@ -9,6 +9,5 @@ namespace InterVR.IF.VR.Components
 {
     public class IF_VR_Interactable : IComponent
     {
-        public IEntity AttachedToHandEntity { get; set; }
     }
 }

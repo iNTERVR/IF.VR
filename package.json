@@ -2,7 +2,7 @@
   "name": "com.intervr.if.vr",
   "displayName": "iNTERVR IF VR",
   "description": "iNTERVR Framework for VR",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "unity": "2020.1",
   "keywords": [],
   "homepage": "https://github.com/iNTERVR/IF.VR#readme",
@@ -20,7 +20,7 @@
     "url": "https://github.com/iNTERVR"
   },
   "dependencies": {
-    "com.intervr.if": "0.8.0"
+    "com.intervr.if": "1.1.0"
   },
   "files": [
     "*.md",
