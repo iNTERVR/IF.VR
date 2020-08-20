@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [1.1.0] - 2020-08-21
+
+### Changed
+
+- Grab 상태 인터페이스 명세 수정 IF_VR_Hand구체화 클래스에서 IEntity로 변경
+
 ## [1.0.0] - 2020-08-18
 
 ### Changed
