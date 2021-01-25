@@ -20,7 +20,7 @@
     "url": "https://github.com/iNTERVR"
   },
   "dependencies": {
-    "com.intervr.if": "1.2.1"
+    "com.intervr.if": "2.3.0"
   },
   "files": [
     "*.md",
